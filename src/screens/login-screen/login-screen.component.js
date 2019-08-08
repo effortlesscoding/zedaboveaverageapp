@@ -3,7 +3,6 @@ import { withLoading } from '../enhancers/with-loading/with-loading.enhancer';
 import { Button } from 'react-native';
 import { Container, AuthInput, AuthInputLabel } from './login-screen.styled-components';
 
-
 export const LoginScreenComponent = withLoading((props) => {
   const handleLogin = () => {
     props.setIsLoading(true);
