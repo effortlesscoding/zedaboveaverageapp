@@ -17,6 +17,7 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* necaboveaverageappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* necaboveaverageappTests.m */; };
+		3C27B70722FBCAE0005882A1 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C27B70422FBCAAA005882A1 /* libRNGestureHandler.a */; };
 		3E962795AA4C7070B416B04E /* libPods-necaboveaverageapp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E27A5ACAA918CE928E65450 /* libPods-necaboveaverageapp-tvOSTests.a */; };
 		450E36DA991C147D991C0BDB /* libPods-necaboveaverageapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E330BCAA42497CD7BF96DB33 /* libPods-necaboveaverageapp.a */; };
 		C90423CAD42E3DBA07A1CEE1 /* libPods-necaboveaverageapp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D968C4A9BE6848C23EFC13 /* libPods-necaboveaverageapp-tvOS.a */; };
@@ -37,6 +38,20 @@
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "necaboveaverageapp-tvOS";
 		};
+		3C27B70322FBCAAA005882A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C27B6FE22FBCAA9005882A1 /* RNGestureHandler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNGestureHandler;
+		};
+		3C27B70522FBCAAA005882A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C27B6FE22FBCAA9005882A1 /* RNGestureHandler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B5C32A36220C603B000FFB8D;
+			remoteInfo = "RNGestureHandler-tvOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +70,7 @@
 		2B5E260DB5428D53B5A3C0E9 /* Pods-necaboveaverageappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-necaboveaverageappTests.debug.xcconfig"; path = "Target Support Files/Pods-necaboveaverageappTests/Pods-necaboveaverageappTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* necaboveaverageapp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "necaboveaverageapp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* necaboveaverageapp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "necaboveaverageapp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C27B6FE22FBCAA9005882A1 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
 		4144CADAA364A4F7A143BF8A /* Pods-necaboveaverageappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-necaboveaverageappTests.release.xcconfig"; path = "Target Support Files/Pods-necaboveaverageappTests/Pods-necaboveaverageappTests.release.xcconfig"; sourceTree = "<group>"; };
 		6B13FF7E4F32A4CE68E7D3D2 /* Pods-necaboveaverageapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-necaboveaverageapp.release.xcconfig"; path = "Target Support Files/Pods-necaboveaverageapp/Pods-necaboveaverageapp.release.xcconfig"; sourceTree = "<group>"; };
 		83D686258D355FD1AD2EFE7F /* Pods-necaboveaverageapp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-necaboveaverageapp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-necaboveaverageapp-tvOS/Pods-necaboveaverageapp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C27B70722FBCAE0005882A1 /* libRNGestureHandler.a in Frameworks */,
 				450E36DA991C147D991C0BDB /* libPods-necaboveaverageapp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,9 +166,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3C27B6FF22FBCAA9005882A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C27B70422FBCAAA005882A1 /* libRNGestureHandler.a */,
+				3C27B70622FBCAAA005882A1 /* libRNGestureHandler-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				3C27B6FE22FBCAA9005882A1 /* RNGestureHandler.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -194,7 +221,6 @@
 				2B5E260DB5428D53B5A3C0E9 /* Pods-necaboveaverageappTests.debug.xcconfig */,
 				4144CADAA364A4F7A143BF8A /* Pods-necaboveaverageappTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -314,6 +340,12 @@
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3C27B6FF22FBCAA9005882A1 /* Products */;
+					ProjectRef = 3C27B6FE22FBCAA9005882A1 /* RNGestureHandler.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* necaboveaverageapp */,
@@ -323,6 +355,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3C27B70422FBCAAA005882A1 /* libRNGestureHandler.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNGestureHandler.a;
+			remoteRef = 3C27B70322FBCAAA005882A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3C27B70622FBCAAA005882A1 /* libRNGestureHandler-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRNGestureHandler-tvOS.a";
+			remoteRef = 3C27B70522FBCAAA005882A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {
