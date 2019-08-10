@@ -1,4 +1,5 @@
 import React from 'react';
+import { Dimensions } from 'react-native';
 import styled from 'styled-components/native';
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -11,23 +12,40 @@ const ScrollviewContainer = styled.ScrollView`
 `;
 
 export const Container = (props) => {
+  if (Dimensions.get('window').height <= 555) {
+    return (
+      <ScrollviewContainer>
+        <LinearGradient
+          start={{x: 0.0, y: 1}} end={{x: 0.5, y: 0.35}}
+          colors={['#0dd3c3', '#3a548d']}
+          style={{
+            height: '100%',
+            padding: 24,
+            paddingTop: 80,
+            top: 0,
+            left: 0,
+          }}
+        >
+          {props.children}
+        </LinearGradient>
+      </ScrollviewContainer>
+    )
+  }
   return (
-    <ScrollviewContainer>
-      <LinearGradient
-        start={{x: 0.0, y: 1}} end={{x: 0.5, y: 0.35}}
-        colors={['#0dd3c3', '#3a548d']}
-        style={{
-          height: '100%',
-          padding: 24,
-          paddingTop: 80,
-          top: 0,
-          left: 0,
-        }}
-      >
-        {props.children}
-      </LinearGradient>
-    </ScrollviewContainer>
-  )
+    <LinearGradient
+      start={{x: 0.0, y: 1}} end={{x: 0.5, y: 0.35}}
+      colors={['#0dd3c3', '#3a548d']}
+      style={{
+        height: '100%',
+        padding: 24,
+        paddingTop: 80,
+        top: 0,
+        left: 0,
+      }}
+    >
+      {props.children}
+    </LinearGradient>
+  );
 }
 
 export const BackgroundImage = styled.Image.attrs({ source: bgImage })`

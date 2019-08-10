@@ -16,7 +16,7 @@ export const ModalScreen = (props) => {
           {tosText.map((text, key) => <Text style={{ marginTop: 8, fontSize: key === 0 ? 20 : 16, fontWeight: key === 0 ? 'bold' : 'normal' }} key={key}>{text}</Text>)}
         </View>
       </ScrollView>
-      <Button onPress={() => props.navigation.goBack()} >I Agree</Button>
+      <Button testID="tos_agree_button" onPress={() => props.navigation.goBack()} >I Agree</Button>
     </Container>
   );
 };

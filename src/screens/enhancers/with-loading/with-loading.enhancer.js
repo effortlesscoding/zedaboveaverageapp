@@ -19,7 +19,7 @@ export const withLoading = (Component) => (props) => {
         onRequestClose={() => {
           setState({ isLoading: false });
         }}>
-        <ModalView>
+        <ModalView testID="loading_indicator">
           <ActivityIndicator />
           <Text>Loading...</Text>
         </ModalView>

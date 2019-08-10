@@ -26,7 +26,7 @@ export const LoginScreenComponent = withLoading((props) => {
       </LogoWrapper>
       <AuthInput value={username} placeholder="Username" onChangeText={(username) => setState({ ...state, username, })}  />
       <AuthInput value={password} placeholder="Password" onChangeText={(password) => setState({ ...state, password })} secureTextEntry />
-      <AuthButton onPress={handleLogin} >Sign In</AuthButton>
+      <AuthButton testID="login_button" onPress={handleLogin} >Sign In</AuthButton>
     </Container>
   );
 });

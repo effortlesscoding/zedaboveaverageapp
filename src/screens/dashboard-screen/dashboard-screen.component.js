@@ -45,7 +45,7 @@ export const DashboardScreenComponent = withNavigation((props) => {
           borderRadius: 16
         }}
       />
-      <Text>Welcome to the dashboard</Text>
+      <Text testID="dashboard_welcome_text">Welcome to the dashboard</Text>
       <Button title="View TOS" onPress={goToTos} />
     </>
   );

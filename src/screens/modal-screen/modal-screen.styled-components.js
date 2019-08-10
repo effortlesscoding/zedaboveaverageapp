@@ -24,7 +24,7 @@ const ButtonText = styled.Text`
 `;
 
 export const Button = (props) => (
-  <ButtonView onPress={props.onPress}>
+  <ButtonView {...props}>
     <ButtonText>{props.children}</ButtonText>
   </ButtonView>
 );
