@@ -1,23 +1,32 @@
-import React from 'react';
+import React, { useState, } from 'react';
 import { withLoading } from '../enhancers/with-loading/with-loading.enhancer';
-import { Button } from 'react-native';
-import { Container, AuthInput, AuthInputLabel } from './login-screen.styled-components';
+import { Alert, } from 'react-native';
+import { Container, AuthInput, AuthButton, LogoImage, LogoSlogan, LogoWrapper, } from './login-screen.styled-components';
+import { authenticationService } from 'root/services/api/authentication.service';
 
 export const LoginScreenComponent = withLoading((props) => {
+  const [state, setState ] = useState({ username: '', password: '' });
+  const { username, password } = state;
+
   const handleLogin = () => {
     props.setIsLoading(true);
-    setTimeout(() => {
+    authenticationService.login({ username, password }).then((data) => {
       props.setIsLoading(false);
       props.navigation.push('dashboard');
-    }, 2500);
+    }).catch(e => {
+      props.setIsLoading(false);
+      setTimeout(() => Alert.alert(e.message), 0);
+    });
   };
   return (
     <Container>
-      <AuthInputLabel>Username:</AuthInputLabel>
-      <AuthInput  />
-      <AuthInputLabel>Password:</AuthInputLabel>
-      <AuthInput secureTextEntry />
-      <Button title="Login" onPress={handleLogin} />
+      <LogoWrapper>
+        <LogoImage />
+        <LogoSlogan >Effortless Coding</LogoSlogan>
+      </LogoWrapper>
+      <AuthInput value={username} placeholder="Username" onChangeText={(username) => setState({ ...state, username, })}  />
+      <AuthInput value={password} placeholder="Password" onChangeText={(password) => setState({ ...state, password })} secureTextEntry />
+      <AuthButton onPress={handleLogin} >Sign In</AuthButton>
     </Container>
   );
 });

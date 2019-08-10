@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'necaboveaverageapp' do
-  # Pods for necaboveaverageapp
+target 'zedaboveaverageapp' do
+  # Pods for zedaboveaverageapp
   pod 'React', :path => '../node_modules/react-native/'
   pod 'React-Core', :path => '../node_modules/react-native/React'
   pod 'React-DevSupport', :path => '../node_modules/react-native/React'
@@ -30,7 +30,15 @@ target 'necaboveaverageapp' do
 
   pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
 
-  target 'necaboveaverageappTests' do
+  pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
+
+  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
+
+  pod 'RNSVG', :path => '../node_modules/react-native-svg'
+
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+  target 'zedaboveaverageappTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -38,10 +46,10 @@ target 'necaboveaverageapp' do
   use_native_modules!
 end
 
-target 'necaboveaverageapp-tvOS' do
-  # Pods for necaboveaverageapp-tvOS
+target 'zedaboveaverageapp-tvOS' do
+  # Pods for zedaboveaverageapp-tvOS
 
-  target 'necaboveaverageapp-tvOSTests' do
+  target 'zedaboveaverageapp-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

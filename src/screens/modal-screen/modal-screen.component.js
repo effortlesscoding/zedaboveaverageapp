@@ -13,10 +13,10 @@ export const ModalScreen = (props) => {
     <Container>
       <ScrollView>
         <View>
-          {tosText.map((text, key) => <Text key={key}>{text}</Text>)}
+          {tosText.map((text, key) => <Text style={{ marginTop: 8, fontSize: key === 0 ? 20 : 16, fontWeight: key === 0 ? 'bold' : 'normal' }} key={key}>{text}</Text>)}
         </View>
       </ScrollView>
-      <Button onPress={() => props.navigation.goBack()} >Done</Button>
+      <Button onPress={() => props.navigation.goBack()} >I Agree</Button>
     </Container>
   );
 };

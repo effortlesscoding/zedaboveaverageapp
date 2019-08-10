@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Text } from 'react-native';
 
 export const Container = styled.View`
   height: 100%;
@@ -13,15 +12,19 @@ export const Container = styled.View`
 
 const ButtonView = styled.TouchableOpacity`
   width: 100%;
-  background-color: #f19737;
+  background-color: #5070b6;
   color: #ffffff;
   padding: 16px;
   align-items: center;
   justify-content: center;
 `;
 
+const ButtonText = styled.Text`
+  color: #ffffff;
+`;
+
 export const Button = (props) => (
   <ButtonView onPress={props.onPress}>
-    <Text>{props.children}</Text>
+    <ButtonText>{props.children}</ButtonText>
   </ButtonView>
 );
