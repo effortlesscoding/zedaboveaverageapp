@@ -1,0 +1,25 @@
+{
+  "expression": "api/login",
+  "method": "POST",
+  "name": "login",
+  "isArray": "false",
+  "responses": {
+    "successful": {
+      "default": true,
+      "status": 200,
+      "headers": {},
+      "data": {},
+      "file": "mocks/mock-data/login/successful.json",
+      "statusText": "",
+      "delay": 2000
+    },
+    "invalid-credentials": {
+      "status": 401,
+      "headers": {},
+      "data": {},
+      "file": "mocks/mock-data/login/invalid-credentials.json",
+      "statusText": "",
+      "delay": 2000
+    }
+  }
+}
